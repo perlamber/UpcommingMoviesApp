@@ -17,8 +17,6 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Movie movie = (Movie) this.getIntent().getExtras().getSerializable("MOVIE");
 
@@ -37,6 +35,5 @@ public class DetailsActivity extends AppCompatActivity {
         date.setText(movie.releaseDate);
         overview.setText(movie.overview);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
